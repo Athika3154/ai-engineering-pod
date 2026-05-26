@@ -1,220 +1,188 @@
-import { useState } from "react";
-
-function Architecture() {
-
-  const [activeStep, setActiveStep] = useState(0);
-
-  const steps = [
-    {
-      title: "Static Website",
-      subtitle: "Frontend Layer",
-      color: "blue",
-      description:
-        "Hosted on S3 + CloudFront for enterprise-grade static delivery.",
-    },
-
-    {
-      title: "Zoho Mail + Cliq",
-      subtitle: "Invocation Layer",
-      color: "cyan",
-      description:
-        "Users invoke AI workflows through mentions and email inclusion.",
-    },
-
-    {
-      title: "API Gateway",
-      subtitle: "Entry Layer",
-      color: "yellow",
-      description:
-        "Validates enterprise requests and routes traffic securely.",
-    },
-
-    {
-      title: "Lambda Router",
-      subtitle: "Core Orchestrator",
-      color: "purple",
-      description:
-        "Classifies workflows, creates events, and controls orchestration.",
-    },
-
-    {
-      title: "EventBridge + SQS",
-      subtitle: "Async Processing",
-      color: "pink",
-      description:
-        "Buffers spikes and enables resilient asynchronous workflows.",
-    },
-
-    {
-      title: "Step Functions",
-      subtitle: "Workflow Engine",
-      color: "green",
-      description:
-        "Coordinates retries, approvals, and long-running orchestration.",
-    },
-
-    {
-      title: "Bedrock Agents",
-      subtitle: "AI Runtime",
-      color: "blue",
-      description:
-        "Specialized AI agents for coding, meetings, documentation, and context.",
-    },
-
-    {
-      title: "Approval Gate",
-      subtitle: "Governance",
-      color: "red",
-      description:
-        "Human approval enforced before external communication delivery.",
-    },
-  ];
-
+function architecture() {
   return (
     <section
       id="architecture"
-      className="relative z-10 px-8 py-32 border-t border-white/10 overflow-hidden"
+      className="mb-28 border-t border-white/10 pt-20"
     >
 
-      {/* Massive Glow */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[180px] rounded-full"></div>
-
       {/* Heading */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="max-w-5xl">
 
         <p className="text-blue-400 text-sm tracking-[0.3em] uppercase">
-          Interactive Architecture
+          Architecture Overview
         </p>
 
         <h2 className="mt-5 text-5xl font-bold leading-tight">
-          Event-Driven Autonomous AI Infrastructure
+          Enterprise Headless AI Architecture
         </h2>
 
-        <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-          Click through the orchestration pipeline to explore how
-          requests move across the enterprise AI system.
+        <p className="mt-8 text-xl text-gray-400 leading-relaxed">
+
+          AI Engineering Pod follows a serverless,
+          event-driven enterprise architecture.
+          Users interact through communication systems
+          such as Zoho Mail and Zoho Cliq,
+          while orchestration, memory,
+          AI execution, governance,
+          and approval workflows
+          operate within AWS managed services.
+
         </p>
+
+      </div>
+
+      {/* Architecture Diagram Placeholder */}
+      <div className="mt-16 rounded-3xl border border-white/10 bg-white/5 p-10">
+
+        <div className="flex items-center justify-center h-[420px] rounded-2xl border border-dashed border-white/10 bg-black/30">
+
+          <p className="text-gray-500 text-lg">
+            Enterprise Architecture Diagram
+          </p>
+
+        </div>
+
+        <p className="mt-6 text-sm text-gray-500 text-center">
+
+          Replace this placeholder with the architecture image
+          from the project documentation.
+
+        </p>
+
+      </div>
+
+      {/* Architecture Principles */}
+      <div className="mt-20">
+
+        <h3 className="text-3xl font-semibold">
+          Core Architecture Principles
+        </h3>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+
+            <h4 className="text-2xl font-semibold">
+              Headless by Design
+            </h4>
+
+            <p className="mt-4 text-gray-400 leading-relaxed">
+
+              The operational experience exists entirely
+              within enterprise communication platforms.
+              No standalone operational frontend
+              application is required.
+
+            </p>
+
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+
+            <h4 className="text-2xl font-semibold">
+              Explicit Invocation
+            </h4>
+
+            <p className="mt-4 text-gray-400 leading-relaxed">
+
+              AI workflows activate only through
+              approved mentions or email inclusion,
+              preventing uncontrolled responses
+              and ensuring predictable behavior.
+
+            </p>
+
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+
+            <h4 className="text-2xl font-semibold">
+              Human Approval
+            </h4>
+
+            <p className="mt-4 text-gray-400 leading-relaxed">
+
+              External communication,
+              workflow execution,
+              and outbound actions
+              remain approval-gated
+              before delivery.
+
+            </p>
+
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+
+            <h4 className="text-2xl font-semibold">
+              Enterprise Memory
+            </h4>
+
+            <p className="mt-4 text-gray-400 leading-relaxed">
+
+              The architecture separates
+              short-term conversational memory
+              from durable semantic project memory
+              for scalable enterprise retrieval.
+
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
       {/* Architecture Flow */}
-      <div className="relative z-10 mt-24 flex flex-col items-center">
+      <div className="mt-20 rounded-3xl border border-white/10 bg-white/5 p-10">
 
-        {steps.map((step, index) => {
+        <h3 className="text-3xl font-semibold">
+          High-Level System Flow
+        </h3>
 
-          const isActive = index <= activeStep;
+        <div className="mt-10 space-y-6">
 
-          return (
-            <div
-              key={index}
-              className="flex flex-col items-center"
-            >
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-blue-400"></div>
+            <p className="text-gray-300">
+              User invokes AI-Pod through email or chat mention.
+            </p>
+          </div>
 
-              {/* Card */}
-              <button
-                onClick={() => setActiveStep(index)}
-                className={`w-[320px] rounded-[32px] border p-6 text-center backdrop-blur-2xl transition-all duration-500 hover:scale-105
-                  
-                  ${
-                    isActive
-                      ? `border-${step.color}-500/40 bg-${step.color}-500/10 shadow-[0_0_50px_rgba(59,130,246,0.2)]`
-                      : "border-white/10 bg-white/5"
-                  }
-                  
-                `}
-              >
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-cyan-400"></div>
+            <p className="text-gray-300">
+              API Gateway receives and validates incoming events.
+            </p>
+          </div>
 
-                {/* Step Number */}
-                <div
-                  className={`w-10 h-10 rounded-full mx-auto flex items-center justify-center text-sm font-semibold mb-5
-                  
-                  ${
-                    isActive
-                      ? `bg-${step.color}-400 text-black`
-                      : "bg-white/10 text-gray-400"
-                  }
-                  
-                `}
-                >
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-purple-400"></div>
+            <p className="text-gray-300">
+              Lambda Router applies RBAC, intent classification, and routing.
+            </p>
+          </div>
 
-                  {index + 1}
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-pink-400"></div>
+            <p className="text-gray-300">
+              EventBridge and SQS coordinate asynchronous workflows.
+            </p>
+          </div>
 
-                </div>
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+            <p className="text-gray-300">
+              Step Functions orchestrate AI agents and approval workflows.
+            </p>
+          </div>
 
-                {/* Subtitle */}
-                <p
-                  className={`text-sm
-                  
-                  ${
-                    isActive
-                      ? `text-${step.color}-300`
-                      : "text-gray-500"
-                  }
-                  
-                `}
-                >
-
-                  {step.subtitle}
-
-                </p>
-
-                {/* Title */}
-                <h3 className="mt-3 text-3xl font-semibold">
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-4 text-gray-400 leading-relaxed">
-                  {step.description}
-                </p>
-
-              </button>
-
-              {/* Connection Line */}
-              {index !== steps.length - 1 && (
-
-                <div className="relative w-[3px] h-20 overflow-hidden">
-
-                  <div
-                    className={`absolute top-0 left-0 w-full transition-all duration-700
-                      
-                      ${
-                        index < activeStep
-                          ? "h-full bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
-                          : "h-0"
-                      }
-                      
-                    `}
-                  ></div>
-
-                  <div className="absolute top-0 left-0 w-full h-full bg-white/10"></div>
-
-                </div>
-
-              )}
-
-            </div>
-          );
-        })}
-
-      </div>
-
-      {/* Active Step Description */}
-      <div className="relative z-10 mt-24 max-w-4xl mx-auto">
-
-        <div className="rounded-[36px] border border-white/10 bg-white/5 backdrop-blur-2xl p-10">
-
-          <p className="text-sm text-blue-400 tracking-[0.3em] uppercase">
-            Active Workflow Stage
-          </p>
-
-          <h3 className="mt-5 text-4xl font-bold">
-            {steps[activeStep].title}
-          </h3>
-
-          <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-            {steps[activeStep].description}
-          </p>
+          <div className="flex items-center gap-4">
+            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <p className="text-gray-300">
+              Bedrock agents retrieve context and generate grounded responses.
+            </p>
+          </div>
 
         </div>
 
@@ -224,4 +192,4 @@ function Architecture() {
   );
 }
 
-export default Architecture;
+export default architecture;
