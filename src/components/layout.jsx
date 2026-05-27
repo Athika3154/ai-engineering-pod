@@ -1,31 +1,33 @@
+// src/components/layout.jsx
+
 function Layout({ children }) {
   return (
     <div className="min-h-screen bg-black text-white flex">
 
       {/* SIDEBAR */}
-      <aside className="w-[280px] border-r border-white/10 bg-[#0a0a0a] sticky top-0 h-screen overflow-y-auto hidden lg:block">
+      <aside className="w-[320px] border-r border-white/10 bg-[#0a0a0a] sticky top-0 h-screen overflow-y-auto hidden lg:block">
 
         {/* Logo */}
         <div className="px-8 py-8 border-b border-white/10">
 
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-3xl font-bold leading-tight">
 
             <span className="text-white">
               AI
             </span>
 
-            <span className="text-blue-400">
+            <span className="text-blue-400 ml-2">
               Engineering
             </span>
 
-            <span className="text-gray-500">
+            <span className="text-gray-500 ml-2">
               Pod
             </span>
 
           </h1>
 
-          <p className="mt-3 text-sm text-gray-500">
-            Enterprise Documentation Portal
+          <p className="mt-4 text-sm text-gray-500 leading-relaxed">
+            Enterprise AI Documentation Portal
           </p>
 
         </div>
@@ -41,6 +43,27 @@ function Layout({ children }) {
           </a>
 
           <a
+            href="#problem"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Problem Statement
+          </a>
+
+          <a
+            href="#direction"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Product Direction
+          </a>
+
+          <a
+            href="#principles"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            System Principles
+          </a>
+
+          <a
             href="#architecture"
             className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
           >
@@ -48,10 +71,52 @@ function Layout({ children }) {
           </a>
 
           <a
-            href="#features"
+            href="#invocation"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Invocation Model
+          </a>
+
+          <a
+            href="#processflow"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Process Flow
+          </a>
+
+          <a
+            href="#memory"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Memory & Knowledge
+          </a>
+
+          <a
+            href="#personas"
             className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
           >
             AI Personas
+          </a>
+
+          <a
+            href="#workflows"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Workflows
+          </a>
+
+          <a
+            href="#usecases"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Use Cases
+          </a>
+
+          <a
+            href="#governance"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Governance
           </a>
 
           <a
@@ -62,10 +127,17 @@ function Layout({ children }) {
           </a>
 
           <a
-            href="#demo"
+            href="#techstack"
             className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
           >
-            Workflow
+            Tech Stack
+          </a>
+
+          <a
+            href="#benefits"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Operational Benefits
           </a>
 
           <a
@@ -73,6 +145,13 @@ function Layout({ children }) {
             className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
           >
             Roadmap
+          </a>
+
+          <a
+            href="#appendix"
+            className="block px-4 py-3 rounded-xl hover:bg-white/5 text-gray-300 transition"
+          >
+            Appendix
           </a>
 
         </nav>
@@ -92,8 +171,8 @@ function Layout({ children }) {
 
               <input
                 type="text"
-                placeholder="Search documentation..."
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 outline-none focus:border-blue-500/50 text-sm"
+                placeholder="Search architecture, workflows, governance..."
+                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 outline-none focus:border-blue-500/50 text-sm text-gray-300 placeholder:text-gray-500"
               />
 
             </div>
