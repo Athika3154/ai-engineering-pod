@@ -115,4 +115,15 @@ function OperationalBenefits() {
           <p>• Better project visibility</p>
           <p>• Reduced meeting overhead</p>
           <p>• Safer enterprise AI execution</p>
-          <p>•
+          <p>• Centralized organizational knowledge</p>
+          <p>• Improved cross-team collaboration</p>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default OperationalBenefits;
